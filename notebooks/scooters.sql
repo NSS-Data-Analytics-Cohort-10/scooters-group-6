@@ -4,7 +4,7 @@ WHERE NOT(scooters IS NOT NULL);
 
 SELECT *
 FROM trips
-LIMIT 10;
+WHERE sumdid = 'Poweredffcc1b11-af95-5e06-b002-82ffb342aae8'
 
 SELECT 
     startdate date,
@@ -44,3 +44,5 @@ SELECT
     ROUND(AVG(COUNT(sumdid)) OVER (PARTITION BY sumdid, DATE(pubtimestamp)),2) avg_daily_usage
 FROM trips
 GROUP BY sumdid, company, pubtimestamp
+
+SELECT 
